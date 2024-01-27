@@ -1,5 +1,9 @@
-# ruby-cli-template
-
-Use this repository as a template for your Ruby CLI (command line interface) project.
-
 - Ruby version: `3.2.1`
+
+# BYOS- Build Your Own Sandwhich
+
+A command line interface app to simulate making a sandwich
+
+## Usage
+
+Run `ruby app.rb` in the terminal.
