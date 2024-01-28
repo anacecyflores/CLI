@@ -22,12 +22,12 @@ class Sandwhich
   def sandwhich_maker
     loop do
       puts "\n"
-      puts "What would you like to add to the #{@name} sandwhich?"
+      puts "What would you like to do to the #{@name} sandwhich?"
       puts "1. add lunch meat to #{@name}"
       puts "2. add condiments to  #{@name}"
       puts "3. add lettuce to  #{@name}"
       puts "4. Want to cut #{@name} in half?"
-      puts "5. Exit simulation"
+      puts "5. Eat my #{@name} sandwich"
       puts "Choose an option: "
       choice = gets.chomp.to_i
       case choice
@@ -40,35 +40,36 @@ class Sandwhich
       when 4
         cut
       when 5
-        puts "Enjoy your #{@name}, goodbye!"
+        puts "Enjoy your #{@name} sandwhich, goodbye!"
         break
       else
-        puts "#{@name} is confused, try another option."
+        puts "#{@name} is not ready, sorry."
       end
     end
   end
 
   def meat
     reaction = [
-      "here is some turkey ham!",
+      "here is some turkey ham! 🦃",
       "let's add some salami.",
       "smoked ham is a must!",
-      "I just added another slice, just in case."
+      "I just added another slice, just in case.",
+      "bacon time 🥓🥓🥓."
     ]
 
     puts "\n"
-    puts "Maybe #{@name} needs more meat?"
-    puts "1. Let's add more meat to the #{@name}."
-    puts "2. Nevermind, we are out of meat. Sorry, cant add more meat to your #{@name}!"
+    puts "Maybe your #{@name} sandwhich needs more meat?"
+    puts "1. Let's add more meat to your #{@name}."
+    puts "2. Nevermind, the #{@name}is good on meat! "
     choice = gets.chomp.to_i
     case choice
     when 1
       puts "\n"
-      puts "You added more meat to the #{@name}."
+      puts "You added more meat to your #{@name} sandwhich. YUM!"
       puts "#{@name} #{reaction.sample}"
     when 2
       puts "\n"
-      puts "You didn't want more meat added to your #{@name}."
+      puts "Aww, you didn't want more meat added to your #{@name} sandwhich.💔"
     end
   end
 
@@ -76,21 +77,21 @@ class Sandwhich
     puts "\n"
     puts "Let's add mayo to #{@name}!"
     puts "What should we add?"
-    puts "1. chipotle sauce"
+    puts "1. tomato"
     puts "2. mustard"
     puts "3. relish"
-    puts "4. Nevermind, #{@name} doesn't need condiments."
+    puts "4. Nevermind, #{@name} doesn't need anything added."
     choice = gets.chomp.to_i
     case choice
     when 1
       puts "\n"
-      puts "#{@name} got more condiments."
+      puts "The #{@name} got sliced tomatoes 🍅!"
     when 2
       puts "\n"
-      puts "#{@name} needed mayo."
+      puts "The #{@name} needed mustard."
     when 3
       puts "\n"
-      puts "#{@name} needed some spice!"
+      puts "Yeah, the #{@name} needed some relish!"
     when 4
     end
   end
@@ -100,30 +101,29 @@ class Sandwhich
       "needed some greens.",
       "needed something healthy.",
       "looks so good.",
-      "is perfect."
+      "is perfect!"
     ]
 
     puts "\n"
-    puts "You added lettuce #{@name}."
+    puts "You added lettuce to the #{@name} sandwhich. 🥬"
     puts "#{@name} #{reaction.sample}"
   end
 
   def cut
     mood = [
-      "neutral",
-      "sleepy",
-      "hungry",
-      "bored",
-      "condimentsful",
-      "like it wants attention"
+      "in half!",
+      "in 4 little pieces",
+      "not cut!(Why would you share?)",
+      "ready to be eaten!",
+      "perfect!"
     ]
 
     puts "\n"
-    puts "You take a look at #{@name}."
-    puts "#{@name} looks #{mood.sample}."
+    puts "You took a bite of your new #{@name} sandwhich."
+    puts "#{@name} is now #{mood.sample}."
   end
 
   def to_s
-    "#{@name} #{@bread} sandwhich"
+    "#{@name} #{@bread}sandwhich"
   end
 end
