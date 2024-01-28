@@ -12,7 +12,7 @@ class Sandwhich
     puts "What will you call your #{self.name}sandwhich?"
     self.name = gets.chomp.capitalize
     puts "\n"
-    puts "The #{self.to_s} looks delicious! Hope you enjoy!"
+    puts "The #{self.to_s} sounds delicious!"
     puts "🥬+🥓+🍅+🍞+🥖🟰 #{self.to_s}🥪!"
         puts "You seem hungry, what kind of bread do you want?"
     self.bread = gets.chomp
@@ -23,11 +23,11 @@ class Sandwhich
     loop do
       puts "\n"
       puts "What would you like to do to the #{@name} sandwhich?"
-      puts "1. add lunch meat to #{@name}"
-      puts "2. add condiments to  #{@name}"
-      puts "3. add lettuce to  #{@name}"
-      puts "4. Want to cut #{@name} in half?"
-      puts "5. Eat my #{@name} sandwich"
+      puts "1. add lunch meat to #{@name} sandwich"
+      puts "2. add condiments to  #{@name} sandwich"
+      puts "3. add lettuce to  #{@name}sandwich"
+      puts "4. Want to cut #{@name} sandwich?"
+      puts "5. Eat my #{@name} sandwich!"
       puts "Choose an option: "
       choice = gets.chomp.to_i
       case choice
@@ -40,7 +40,7 @@ class Sandwhich
       when 4
         cut
       when 5
-        puts "Enjoy your #{@name} sandwhich, goodbye!"
+        puts "Enjoy your #{@name} Sandwhich, goodbye!"
         break
       else
         puts "#{@name} is not ready, sorry."
@@ -50,22 +50,22 @@ class Sandwhich
 
   def meat
     reaction = [
-      "here is some turkey ham! 🦃",
-      "let's add some salami.",
+      ",here is some turkey ham! 🦃",
+      ",let's add some salami.",
       "smoked ham is a must!",
-      "I just added another slice, just in case.",
-      "bacon time 🥓🥓🥓."
+      ",I just added another slice, just in case.😉",
+      ",bacon time 🥓🥓🥓."
     ]
 
     puts "\n"
     puts "Maybe your #{@name} sandwhich needs more meat?"
     puts "1. Let's add more meat to your #{@name}."
-    puts "2. Nevermind, the #{@name}is good on meat! "
+    puts "2. Nevermind, the #{@name} is good on meat!✨"
     choice = gets.chomp.to_i
     case choice
     when 1
       puts "\n"
-      puts "You added more meat to your #{@name} sandwhich. YUM!"
+      puts "You added more meat to your #{@name} sandwhich. YUM!😍"
       puts "#{@name} #{reaction.sample}"
     when 2
       puts "\n"
@@ -101,12 +101,12 @@ class Sandwhich
       "needed some greens.",
       "needed something healthy.",
       "looks so good.",
-      "is perfect!"
+      "is perfect!💖"
     ]
 
     puts "\n"
     puts "You added lettuce to the #{@name} sandwhich. 🥬"
-    puts "#{@name} #{reaction.sample}"
+    puts "#{@name} sandwhich #{reaction.sample}"
   end
 
   def cut
@@ -119,7 +119,7 @@ class Sandwhich
     ]
 
     puts "\n"
-    puts "You took a bite of your new #{@name} sandwhich."
+    puts "You took a bite of your new #{@name} sandwhich. 😋"
     puts "#{@name} is now #{mood.sample}."
   end
 
