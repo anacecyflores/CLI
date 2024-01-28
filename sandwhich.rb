@@ -13,9 +13,11 @@ class Sandwhich
     self.name = gets.chomp.capitalize
     puts "\n"
     puts "The #{self.to_s} sounds delicious!"
-    puts "🥬+🥓+🍅+🍞+🥖🟰 #{self.to_s}🥪!"
-        puts "You seem hungry, what kind of bread do you want?"
+        puts "Let's start, what kind of bread do you want?"
     self.bread = gets.chomp
+        puts "\n"
+    puts "Great choice, #{bread.to_s} bread is great for your #{@name} sandwhich !"
+    puts "🥬+🥓+🍅+🍞+🥖 🟰 Delicious #{name} 🥪!"
     sandwhich_maker
   end
 
@@ -30,7 +32,7 @@ class Sandwhich
       puts "5. Eat my #{@name} sandwich!"
       puts "Choose an option: "
       choice = gets.chomp.to_i
-      case choice
+  
       when 1
         meat
       when 2
