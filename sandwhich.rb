@@ -1,7 +1,7 @@
 class Sandwhich
   attr_accessor :name, :bread
 
-  def initialize
+  def initialize 
     @name = name
     @bread = bread
   end
@@ -17,7 +17,7 @@ class Sandwhich
     self.bread = gets.chomp
         puts "\n"
     puts "Great choice, #{bread.to_s} bread is great for your #{@name} sandwhich !"
-    puts "🥬+🥓+🍅+🍞+🥖 🟰 Delicious #{name} 🥪!"
+    puts "🥬+🥓+🍅+🍞+🥖🟰 Delicious #{name} 🥪!"
     sandwhich_maker
   end
 
@@ -25,14 +25,14 @@ class Sandwhich
     loop do
       puts "\n"
       puts "What would you like to do to the #{@name} sandwhich?"
-      puts "1. add lunch meat to #{@name} sandwich"
-      puts "2. add condiments to  #{@name} sandwich"
-      puts "3. add lettuce to  #{@name}sandwich"
-      puts "4. Want to cut #{@name} sandwich?"
-      puts "5. Eat my #{@name} sandwich!"
+      puts "1. add lunch meat to #{@name} sandwich 🥓"
+      puts "2. add condiments to  #{@name} sandwich 🧂"
+      puts "3. add lettuce to  #{@name} sandwich 🥬"
+      puts "4. Want to cut #{@name} sandwich? 🔪"
+      puts "5. Eat my #{@name} sandwich! 🍽️"
       puts "Choose an option: "
       choice = gets.chomp.to_i
-  
+      case choice
       when 1
         meat
       when 2
@@ -42,10 +42,10 @@ class Sandwhich
       when 4
         cut
       when 5
-        puts "Enjoy your #{@name} Sandwhich, goodbye!"
+        puts "Enjoy your #{@name} Sandwhich, goodbye! 😋"
         break
       else
-        puts "#{@name} is not ready, sorry."
+        puts "#{@name} is not ready, sorry. 😥 "
       end
     end
   end
@@ -93,7 +93,7 @@ class Sandwhich
       puts "The #{@name} needed mustard."
     when 3
       puts "\n"
-      puts "Yeah, the #{@name} needed some relish!"
+      puts "Yeah, the #{@name} needed some relish! 😉"
     when 4
     end
   end
@@ -107,7 +107,7 @@ class Sandwhich
     ]
 
     puts "\n"
-    puts "You added lettuce to the #{@name} sandwhich. 🥬"
+    puts " 🥬 You added lettuce to the #{@name} sandwhich."
     puts "#{@name} sandwhich #{reaction.sample}"
   end
 
