@@ -12,3 +12,7 @@ A command line interface app to simulate making a sandwich.
 Run `ruby app.rb` in the terminal to start making your sandwhich!
 <br> Start by naming your sandwhich, choose your bread and add your condiments to make your very own sandwhich!
 <br> Enjoy 😋!
+
+## To run tests:
+
+ruby tests/test_calculator.r
